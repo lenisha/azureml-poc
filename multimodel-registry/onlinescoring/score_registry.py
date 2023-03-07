@@ -38,7 +38,8 @@ def run(raw_data):
 
     data = input_data["data"]
     data = numpy.array(data)
-    num_rows, num_cols = data.shape
+    num_rows, num_cols = data.shape # just example based on number of rows to switch model
+
     if ( num_rows <= 2 ) :
       logging.info(" Model 1 is predicting")
       result = model1.predict(data)
