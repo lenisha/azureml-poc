@@ -21,7 +21,8 @@ def init():
     for var in env_vars:
         print(f"{var}: {env_vars[var]}")
 
-     
+    credential = ManagedIdentityCredential(client_id=os.getenv("UAI_CLIENT_ID"))
+    
 
     # More details  https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-models-mlflow
     mlflow.set_tracking_uri(os.getenv("TRACKING_URI"))
